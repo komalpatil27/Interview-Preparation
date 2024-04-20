@@ -108,7 +108,11 @@ const ArrayMethods = () => {
         return (acc.Speed || 0) > curVal.Speed ? acc : curVal;
     }, {})
 
-    console.log(result3, result3)
+    let result5 = listOfHeroes.reduce((acc , currval) => {
+        return (currval.Speed > 2 ? [...acc , currval.Name] : acc)
+    }, [])
+    console.log(result3, result5)
+    
     return (
         <>
             <h1>Array Method :</h1>

@@ -5,6 +5,7 @@
                 - Accessibility: It is easier for persons with disabilities to navigate your website if you have appropriately laid up a foundation of semantic HTML.
                 - SEO (Search engine optimization) : Search engines utilize HTML to decipher the content, its placement of semantic keywords has an impact on the webpage’s ranking.
                 - Browser compatibility: Each browser interacts with semantic elements differently, semantic elements make it simple to utilize larger coverage of your website across platforms.
+                - cancel the element make ut simoke utilise larger coverrage of your website 
         2. **Audio and Video Support** :
             - To embed Audio and Video into your HTML document, you may use the following two tags, &lt;audio&gt; and &lt;video&gt; tags.
                 - Example :

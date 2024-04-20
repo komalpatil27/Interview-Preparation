@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext, useReducer, useLayoutEffect, useRef } from "react";
 import { useMemo } from "react";
 const HooksConcept = () => {
+
     // useRef usage
     const [countVal, setCountVal] = useState(0)
     const refVal = useRef(null)
@@ -10,20 +11,21 @@ const HooksConcept = () => {
         refCount.current = refCount.current + 1
 
         // memoising val
-        setCountVal(countVal + 1)
+        setCountVal(countVal)
     }
     console.log(refCount, 'refcount')
 
     // Usememo Hook
-
     const memoizedVal = useMemo(() => {
         console.log('memo')
         return `${countVal} changed`
     }, [countVal])
+
+   
     return (<>
         Hoooks
         <input ref={refVal}></input>
-        <button onClick={handleClick}></button>
+        <button onClick={() => handleClick(countVal +1)}></button>
         {memoizedVal}
     </>)
 }
