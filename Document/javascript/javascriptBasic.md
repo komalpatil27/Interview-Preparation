@@ -133,6 +133,7 @@
 	- Ensures that the function is called at a regular interval, even if the event is triggered multiple times.
 	- Useful when you want to list the Frequency of function calls.
 	- Eg. You can throttle a slide change Function that is called every time the user clicks a button in a carousel.
+	
 	Debouncing	
 	- Debouncing waits for a certain time before invoking the function again.	
 	- Ensures that the function is called only once, even if the event is triggered multiple times.
@@ -147,32 +148,32 @@
 
 18. ## Array and Object Methods :
 
-	• The at() method of Array instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
-	• The concat() method of Array instances is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
-	• The copyWithin() method of Array instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.
-	• The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
-	• The fill() method of Array instances changes all elements within a range of indices in an array to a static value. It returns the modified array.
-	• The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
-	• The find() method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
-	• The findIndex() method of Array instances returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned
-	• The findLast() method of Array instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function. If no elements satisfy the testing function, undefined is returned.
-	• The findLastIndex() method of Array instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
-	• The flat() method of Array instances creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-	• The forEach() method of Array instances executes a provided function once for each array element.
-	• The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
-	• The includes() method of Array instances determines whether an array includes a certain value among its entries, returning true or false as appropriate.
-	• The Array.isArray() static method determines whether the passed value is an Array.
-	• The join() method of Array instances creates and returns a new string by concatenating all of the elements in this array, separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.
-	• The keys() method of Array instances returns a new array iterator object that contains the keys for each index in the array.
-	• The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
-	• The map() method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
-	• The pop() method of Array instances removes the last element from an array and returns that element. This method changes the length of the array.
-	• The push() method of Array instances adds the specified elements to the end of an array and returns the new length of the array.
-	• The reverse() method of Array instances reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
-	• To reverse the elements in an array without mutating the original array, use toReversed()
-	• The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
-	• splice(start,deleteCount,item1,item2)
-	• The slice() method of Array instances returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+	- The at() method of Array instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
+	- The concat() method of Array instances is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+	- The copyWithin() method of Array instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.
+	- The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+	- The fill() method of Array instances changes all elements within a range of indices in an array to a static value. It returns the modified array.
+	- The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+	- The find() method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+	- The findIndex() method of Array instances returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned
+	- The findLast() method of Array instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function. If no elements satisfy the testing function, undefined is returned.
+	- The findLastIndex() method of Array instances iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
+	- The flat() method of Array instances creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+	- The forEach() method of Array instances executes a provided function once for each array element.
+	- The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
+	- The includes() method of Array instances determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+	- The Array.isArray() static method determines whether the passed value is an Array.
+	- The join() method of Array instances creates and returns a new string by concatenating all of the elements in this array, separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.
+	- The keys() method of Array instances returns a new array iterator object that contains the keys for each index in the array.
+	- The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+	- The map() method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
+	- The pop() method of Array instances removes the last element from an array and returns that element. This method changes the length of the array.
+	- The push() method of Array instances adds the specified elements to the end of an array and returns the new length of the array.
+	- The reverse() method of Array instances reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
+	- To reverse the elements in an array without mutating the original array, use toReversed()
+	- The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+	- splice(start,deleteCount,item1,item2)
+	- The slice() method of Array instances returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
 	const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 
 	console.log(animals.slice(2));
