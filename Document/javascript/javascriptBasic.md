@@ -223,9 +223,9 @@
 - [Es6](https://www.javascripttutorial.net/es6/)
 </details>
 
-### 20. Critical Rendering Path
 <details>
 
+### 20. Critical Rendering Path
 - The Critical Rendering Path refers to the sequence of steps that a web browser takes to convert HTML, CSS, and JavaScript code into a visual representation on a user's screen. 
 - It involves a series of processes, such as constructing the Document Object Model (DOM), generating the CSS Object Model (CSSOM), and combining both to create the Render Tree. The Render Tree is then used to calculate the layout and paint the pixels on the user's screen. 
 ![Alt text](image-3.png)
