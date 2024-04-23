@@ -230,5 +230,11 @@
 - A callback : is a function that is passed as an argument to another function that executes the callback based on the result. They are basically functions that are executed only after a result is produced
 - Callback Hell : Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. 
 
-
-
+### Event Propagation
+1. Bubbling : 
+- Bubbling means that the event propagates from the target element (i.e. the button the user clicked) up through its ancestor tree, starting from the nearest one. By default, all events bubble.
+- use event.stopPropagation to handle bubbling events.
+- Due to event bubbling, event triggered on the child elements will bubble up to the parent element.
+2. Capturing : Capturing is the exact opposite of bubbling, meaning that the outer event handlers are fired before the most specific handler (i.e. the one on the button). Note that all capturing event handlers are run first, then all the bubbling event handlers.
+3. Event Delegation : Event delegation refers to the idea of delegating event listening to parent elements instead of adding event listeners directly to the event targets. Using this technique, the parent can catch and handle the bubbling events as necessary.
+ ![Alt text](./images/eventBubble.png)
