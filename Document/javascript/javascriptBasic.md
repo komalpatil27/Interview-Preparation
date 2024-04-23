@@ -2,24 +2,23 @@
 
 1. ## Understanding of JS working Engine :
 
+![Alt text](image.png)
+![Alt text](image-1.png)
+<details>
 	Execution context and callstack
-		○ When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
+-   When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
 
-	During the context runtime, the parser parses the source code and allocates memory for the variables and functions. The source code is generated and gets executed.
+- During the context runtime, the parser parses the source code and allocates memory for the variables and functions. The source code is generated and gets executed.
 	
-	
-		○ To keep the track of all the contexts, including global and functional, the JavaScript engine uses a call stack. A call stack is also known as an 'Execution Context Stack', 'Runtime Stack', or 'Machine Stack'.
-		It uses the LIFO principle (Last-In-First-Out). When the engine first starts executing the script, it creates a global context and pushes it on the stack.
-	
+- To keep the track of all the contexts, including global and functional, the JavaScript engine uses a call stack. 
+- A call stack is also known as an 'Execution Context Stack', 'Runtime Stack', or 'Machine Stack'.
+		It uses the LIFO principle (Last-In-First-Out). 
+- When the engine first starts executing the script, it creates a global context and pushes it on the stack.
+</details>
 
 2. ## Let/Const/var
-	KEYWORD	SCOPE	REDECLARATION & 	HOISTING
-			REASSIGNMENT
-	var	Global, Local	yes & yes	yes, with default value
-	let	Global, Local, Block	no & yes	yes, without default value
-	const	Global, Local, Block	no & no	yes, without default value
+![Alt text](image-2.png)
 
-  
 3.  ## Temporal dead zone (TDZ) :
 		 The area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
 		
@@ -39,6 +38,7 @@
 	
 	
 8. ## Shallow and Deep copy :
+<details>
 	• Shallow Copy
 		A shallowt copies the object and all its properties, but any nested objects or arrays will still reference the same memory location as the original object. It means that if you make changes to the nested object, it will also affect the original object, as well as the copied object.
 		
@@ -51,10 +51,12 @@
 	• Deep Copy
 				1. const originalObject = { a: 1, b: { c: 2 } };  
 				2. const deepCopy = JSON.parse(JSON.stringify(originalObject));  
-				
+</details>				
 		
 9. ## Virtual dom , shadow dom
-	- Dom :
+<details>
+
+- Dom :
 	A Document Object Model represents a webpage structure in the form of a tree. It acts as an API to the web document, allowing programmatic interaction. This method enables programs to change the document style, structure, and content.
 	
 	- Virtual Dom : Used for solving performance issues.
@@ -68,10 +70,12 @@
 	It does not represent the entire Document Object Model. Instead, it acts as a subtree or a separate DOM for a specific element.
 		a. Focuses on encapsulating the style and behavior of web components, providing a scoped environment for CSS and JavaScript.
 		b. Attachshadow method is used for encapsulating content in shadow dom.
-	
+</details>
+
 10. ## Closure
 		Closure in JavaScript is a form of lexical scoping used to preserve variables from the outer scope of a function in the inner scope of a function.
 11. ## Currying
+<details>
 		currying is a technique in JavaScript that allows you to transform functions with multiple arguments into a sequence of functions, each taking one argument at a time. 
 		  /*Function currying*/
 		    function addingValue(firstVal) {
@@ -82,8 +86,10 @@
 		    let addBytWo = addingValue(2);
 		    let addbyThree = addingValue(3);
 		    console.log(addBytWo(10, 2), addbyThree(12))
-		
+</details>
+
 12. ## HOC :
+<details>
 	Higher-order components or HOC is the advanced method of reusing the component functionality logic. It simply takes the original component and returns the enhanced component.
 	Const App = (props) => {
 	Return (<>{props.name}</>)
@@ -104,8 +110,10 @@
 	} 
 	  
 	export default EnhancedComponent;
-	
+</details>
+
 13. ## Higher order functions
+<details>
 		const higherorderFunction = (fnCall , numb) => {
 	        return fnCall(numb)
 	    }
@@ -114,8 +122,10 @@
 	    }
 	    const result = higherorderFunction(addBy2 , 5)
 	    console.log(result)
-	
+</details>
+
 14. ## Call, apply and bind
+<details>
 	Call is a function that helps you change the context of the invoking function. it helps you replace the value of this inside a function with whatever value you want.
 	Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
 	Bind is a function that helps you create another function that you can execute later with the new context of this is provided
@@ -123,13 +133,16 @@
 	func.call(thisObj,args1,args2,...)
 	func.apply(thisObj,newArray(args1,args2));
 	func.bind(thisObj,arg1,arg2,...,argN);
-	
+</details>
+
 15. ## This Keyword :  
 	 'this' is a special keyword that refers to the context in which a function is called. In the case of event handlers, 'this' usually refers to the HTML element that the event handler is attached to. This allows you to directly access and manipulate the element from within the event handler function
 	
 16. ## Debouncing / Throttling
+<details>
+
 	Throttling 	
-	- Throttling limits the number of times the function can be called over a certain period.
+- Throttling limits the number of times the function can be called over a certain period.
 	- Ensures that the function is called at a regular interval, even if the event is triggered multiple times.
 	- Useful when you want to list the Frequency of function calls.
 	- Eg. You can throttle a slide change Function that is called every time the user clicks a button in a carousel.
@@ -139,16 +152,21 @@
 	- Ensures that the function is called only once, even if the event is triggered multiple times.
 	- Useful when you want to delay the invocation of a function until a certain period of inactivity has passed.	
 	- Eg. You can debounce an async API request function that is called every time the user types in an input field.	
-	
+</details>
+
 17. ## Promise :
-	- The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+<details>
+
+- The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 	- Promise.all -> Whenever all promises are fullfilled it will be aggregating the results of multiple promises.
 	- Promise.race -> it will return first promise which is resolved.
 	- Promise.Allsettled => it will give status and value if promise is fullfilled or status and reason if it's rejected
+</details>
 
 18. ## Array and Object Methods :
+<details>
 
-	- The at() method of Array instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
+- The at() method of Array instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 	- The concat() method of Array instances is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
 	- The copyWithin() method of Array instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.
 	- The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
@@ -180,4 +198,42 @@
 	// Expected output: Array ["camel", "duck", "elephant"]
 
 	console.log(animals.slice(2, 4));
-	
+</details>
+
+### 19. Functions
+<details>
+
+- Function declaration : To declare a function, you use the function keyword and specify a name for the function. 
+- Function Expression : 
+	- A function expression is very similar to, and has almost the same syntax as, a function declaration. The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions.
+	- Function expressions in JavaScript are not hoisted.
+- Functional Programming : 
+	Functional programming is a declarative programming paradigm style where one applies pure functions in sequence to solve complex problems.
+- Arrow Functions : An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage.
+- IIFE : Immediately invoked function expression 
+  ```jsx
+   (function () {
+  console.log("Code runs!");})();
+  ```
+</details>
+
+### 20. ES6
+<details>
+
+- [Es6](https://www.javascripttutorial.net/es6/)
+</details>
+
+### 20. Critical Rendering Path
+<details>
+
+- The Critical Rendering Path refers to the sequence of steps that a web browser takes to convert HTML, CSS, and JavaScript code into a visual representation on a user's screen. 
+- It involves a series of processes, such as constructing the Document Object Model (DOM), generating the CSS Object Model (CSSOM), and combining both to create the Render Tree. The Render Tree is then used to calculate the layout and paint the pixels on the user's screen. 
+![Alt text](image-3.png)
+</details>
+
+### 20. Callbacks & Callback Hell
+<details>
+
+- A callback : is a function that is passed as an argument to another function that executes the callback based on the result. They are basically functions that are executed only after a result is produced
+- Callback Hell : Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. 
+</details>
