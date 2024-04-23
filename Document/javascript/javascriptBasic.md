@@ -231,9 +231,8 @@
 ![Alt text](image-3.png)
 </details>
 
-### 20. Callbacks & Callback Hell
 <details>
-
+<summary><strong>20. Callbacks & Callback Hell</strong></summary>
 - A callback : is a function that is passed as an argument to another function that executes the callback based on the result. They are basically functions that are executed only after a result is produced
 - Callback Hell : Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. 
 </details>
