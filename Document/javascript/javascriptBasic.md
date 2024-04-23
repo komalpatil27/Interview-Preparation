@@ -2,8 +2,8 @@
 
 ### 1. Understanding of JS working Engine :
 
-![Alt text](image.png)
-![Alt text](image-1.png)
+![Alt text](./images/image.png)
+![Alt text](./images/image-1.png)
 
 	Execution context and callstack
 -   When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
@@ -17,7 +17,7 @@
 
 
 ### 2. Let/Const/var
-![Alt text](image-2.png)
+![Alt text](./images/image-2.png)
 
 ### 3.  Temporal dead zone (TDZ) :
 		 The area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
@@ -222,11 +222,13 @@
 
 - The Critical Rendering Path refers to the sequence of steps that a web browser takes to convert HTML, CSS, and JavaScript code into a visual representation on a user's screen. 
 - It involves a series of processes, such as constructing the Document Object Model (DOM), generating the CSS Object Model (CSSOM), and combining both to create the Render Tree. The Render Tree is then used to calculate the layout and paint the pixels on the user's screen. 
-![Alt text](image-3.png)
+![Alt text](./images/image-3.png)
 
 
 ### 22. Callbacks & Callback Hell
 
 - A callback : is a function that is passed as an argument to another function that executes the callback based on the result. They are basically functions that are executed only after a result is produced
 - Callback Hell : Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. 
+
+
 
