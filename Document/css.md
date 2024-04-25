@@ -66,11 +66,11 @@ There are five steps in the cascade algorithm, in order:
 	```<h1>A heading</h1>
 		<p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
 				melon azuki bean garlic.</p>```
-				
+
 	- Subsequent-sibling combinator : all siblings will get highlighted 
 			
 			
 ###	3. Box Model :
-		
+		The CSS box model is a fundamental concept in web design that describes how elements are sized and laid out on a web page. It defines the different components that make up the dimensions and spacing of an HTML element.
 			
 			
