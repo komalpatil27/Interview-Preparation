@@ -14,7 +14,7 @@ There are five steps in the cascade algorithm, in order:
  		 background-color: yellow;
 		}
    - Class :  
-	<h1 class="highlight">Class selectors</h1>
+	```<h1 class="highlight">Class selectors</h1>```
 	.highlight {
 	background-color: yellow;
 	}
