@@ -21,6 +21,10 @@
 
 ### 3.  Temporal dead zone (TDZ) :
 		 The area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
+		 It is a behavior in JavaScript that occurs with the use of let and const variables and their declarations. The Temporal Dead Zone is the period of time during which the variable is unusable because it has been declared but not yet initialized.
+		 ```console.log(x); // ReferenceError: Cannot access 'x' before initialization
+			let x = 5;
+		 ```
 		
 ### 4. Hoisting :
 		 Hositing is a mechanism by which function or variable declartions are moved to the top of their respective scopes before code gets executed. Moved to the top does not mean javascript rearranges the sequence , it means it gives higher precedence to the declarations.
@@ -74,6 +78,7 @@
 
 ### 10. Closure
 		Closure in JavaScript is a form of lexical scoping used to preserve variables from the outer scope of a function in the inner scope of a function.
+		
 ### 11. Currying
 
 		currying is a technique in JavaScript that allows you to transform functions with multiple arguments into a sequence of functions, each taking one argument at a time. 
@@ -238,3 +243,40 @@
 2. Capturing : Capturing is the exact opposite of bubbling, meaning that the outer event handlers are fired before the most specific handler (i.e. the one on the button). Note that all capturing event handlers are run first, then all the bubbling event handlers.
 3. Event Delegation : Event delegation refers to the idea of delegating event listening to parent elements instead of adding event listeners directly to the event targets. Using this technique, the parent can catch and handle the bubbling events as necessary.
  ![Alt text](./images/eventBubble.png)
+
+ ### Function Basics
+
+ - Function statement/Function declaration : Hoisting takes place
+	```function a(){
+		console.log("acheck");
+		a()
+	}```
+
+- Function expression : Hoisting does not work
+	```
+	const a = function(){
+		console.log("bcheck");
+	}
+	b()
+	```
+- Anonymous function : when functiona used as values (assign it to variable)
+	```
+	function(){
+			console.log("bcheck");
+		}
+	```
+- Named function Expression: 
+	```
+	const a = function b(){
+		console.log(b); //can access here
+	}
+	b() //Cannot access function in outside scope
+	
+	```
+- First class functions :
+	In JavaScript, functions are first-class citizens or first-class objects. This means that functions in JavaScript can be treated like any other variable or object, and can be:
+
+	  -	Assigned to variables
+	  -	Passed as arguments to other functions
+	  -	Returned from other functions
+	  -	Stored in data structures like arrays and objects
