@@ -40,6 +40,6 @@ refer react-redux folder for code
 +-------------------+
 |      React        |
 |    Component      |
-+-------------------+```
-
++-------------------+
+```
 ![Redux-Arch](./images/redux.png)
