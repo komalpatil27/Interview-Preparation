@@ -19,15 +19,16 @@ There are five steps in the cascade algorithm, in order:
 	background-color: yellow;
 	}
 
-- Universal Selector: 
-	```* {
-	margin: 0;
-	}
-    article *:first-child{font-weight:bold;} ```
-- Id : 
-	#one {
-	background-color: yellow;
-	}
+	- Universal: 
+		
+		```* {
+		margin: 0;
+		}
+		article *:first-child{font-weight:bold;} ```
+	- Id : 
+		#one {
+		background-color: yellow;
+		}
 
 - b. Attribute selectors :
     - we can match any list item with a class attribute. This matches all of the list items except the first one.
