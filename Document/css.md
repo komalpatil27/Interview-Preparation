@@ -48,25 +48,26 @@ There are five steps in the cascade algorithm, in order:
 			
 - c. Combinators : Link to refer : https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators#descendant_combinator
 		
-- Descendant combinator : 
- Typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor
-.box p {
-  color: red;
-}
+	- Descendant combinator : 
+	Typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor
+	.box p {
+	color: red;
+	}
 
-- Child combinator : 
-ul > li {
-  border-top: 5px solid red;
-}
+	- Child combinator : 
+	ul > li {
+	border-top: 5px solid red;
+	}
 
-- Next-sibling combinator : Immediate sibbling will get styles applied
-h1 + p {
-  font-weight: bold;
-}
-```<h1>A heading</h1>
-    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-            melon azuki bean garlic.</p>```
-- Subsequent-sibling combinator : all siblings will get highlighted 
+	- Next-sibling combinator : Immediate sibbling will get styles applied
+	h1 + p {
+	font-weight: bold;
+	}
+	```<h1>A heading</h1>
+		<p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
+				melon azuki bean garlic.</p>```
+				
+	- Subsequent-sibling combinator : all siblings will get highlighted 
 			
 			
 ###	3. Box Model :
