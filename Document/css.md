@@ -8,7 +8,7 @@ There are five steps in the cascade algorithm, in order:
 	The “cascading” in CSS refers to the fact that styling rules “cascade” down from several sources. This means that CSS has an inherent hierarchy and styles of a higher precedence will overwrite rules of a lower precedence.
 
 ###	2. CSS building blocks :
-- Type , class, Id selectors : 
+- a. Type , class, Id selectors : 
 	- Type : 
 		span {
  		 background-color: yellow;
@@ -19,16 +19,15 @@ There are five steps in the cascade algorithm, in order:
 	background-color: yellow;
 	}
 
-- Universal Seector: 
-* {
-  margin: 0;
-}
-
-article *:first-child{font-weight:bold;}
+- Universal Selector: 
+	```* {
+	margin: 0;
+	}
+    article *:first-child{font-weight:bold;} ```
 - Id : 
-#one {
-  background-color: yellow;
-}
+	#one {
+	background-color: yellow;
+	}
 
 - b. Attribute selectors :
     - we can match any list item with a class attribute. This matches all of the list items except the first one.
@@ -46,7 +45,7 @@ article *:first-child{font-weight:bold;}
 	color: red;
 	}
 			
-- c. Combinators : Link to refer : (Descendant combinator)
+- c. Combinators : Link to refer : https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators#descendant_combinator
 		
 - Descendant combinator : 
  Typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor
@@ -63,9 +62,9 @@ ul > li {
 h1 + p {
   font-weight: bold;
 }
-<h1>A heading</h1>
+```<h1>A heading</h1>
     <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo
-            melon azuki bean garlic.</p>
+            melon azuki bean garlic.</p>```
 - Subsequent-sibling combinator : all siblings will get highlighted 
 			
 			
