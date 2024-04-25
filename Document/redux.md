@@ -1,6 +1,7 @@
 ### Redux architecture
 refer react-redux folder for code
-```+-------------------+
+```
++-------------------+
 |      React        |
 |    Component      |
 +-------------------+
