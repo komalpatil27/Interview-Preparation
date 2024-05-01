@@ -17,6 +17,7 @@ const PollyFill = () => {
 
     // pollyFill for reduce
     Array.prototype.reducePollyFill = function (callbackFn, initialvalue) {
+        console.log('inside')
         let accumulator = ((initialvalue === undefined) ? undefined : initialvalue)
         for (let i = 0; i < this.length; i++) {
             if (accumulator !== undefined) {
@@ -24,6 +25,7 @@ const PollyFill = () => {
                 // callback(accumulator, currentValue, currentIndex, array).
 
             } else {
+                console.log(this[i] , 'check')
                 accumulator = this[i]
             }
         }
