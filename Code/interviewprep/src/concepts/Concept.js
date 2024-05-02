@@ -12,13 +12,13 @@ function Concepts() {
 
     return (
         <>
-            {/* <ArrayMethods /> */}
+            <ArrayMethods />
             {/* <PromisePractice /> */}
             {/* <JavascriptConcepts /> */}
             {/* <HooksConcept /> */}
             {/* <Provider store={store}><ReduxConcept /></Provider> */}
             {/* <ApiConcept/> */}
-            {<PollyFill/>}
+            {/* {<PollyFill/>} */}
         </>)
 }
 export default Concepts;

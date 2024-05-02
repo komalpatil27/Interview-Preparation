@@ -53,7 +53,7 @@ const ArrayMethods = () => {
     // Array.prototype.slice
     // slice() method is used to create subsets from an array.
     // Syntax slice(start , end)
-    // Returen value : new array
+    // Return value : new array
 
     let result = ['b', 'c', 'd', 'o'].slice(2, 3)
     console.log(result, 'result')
@@ -91,7 +91,7 @@ const ArrayMethods = () => {
             "Speed": 2,
             "Durability": 3,
             "EnergyProjection": 3,
-            "FightSkills": 6
+            "FightSkills": 4
         },
         {
             "Name": "Dr. Robert Bruce Banner",
@@ -111,7 +111,13 @@ const ArrayMethods = () => {
     let result5 = listOfHeroes.reduce((acc , currval) => {
         return (currval.Speed > 2 ? [...acc , currval.Name] : acc)
     }, [])
-    console.log(result3, result5)
+
+    let result6 = listOfHeroes.reduce((acc , currval) => {
+        return (!acc.find(item => item?.FightSkills === currval?.FightSkills) ? [...acc , currval] : acc)
+    }, [])
+
+    
+    console.log(result3, result5, result6 , 'Resultsssssss')
     
     return (
         <>

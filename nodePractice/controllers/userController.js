@@ -1,10 +1,10 @@
 // Controller 
-
-const getUserdetail = (req , res) => {
+import asyncHandler from 'express-async-handler'
+const getUserdetail = asyncHandler(async (req , res) => {
     res.status(200).json({message : 'all users are listed'})
-}
+})
 
-const postUserDetail = (req , res) => {
+const postUserDetail = asyncHandler(async (req , res) => {
     console.log(req.body);
     const {id , email, name} = req.body
     if(!email || !name || !id){
@@ -12,17 +12,17 @@ const postUserDetail = (req , res) => {
         throw new Error('all fields are mandatory');
     }
     res.status(200).json({message : 'Create userDetails'})
-}
+})
 
-const updateUserDetail = (req , res) => {
+const updateUserDetail = asyncHandler(async (req , res) => {
     res.status(200).json({message : `Update user details for ${req.params.id}`})
-}
+})
 
-const deleteUserDetail = (req , res) => {
+const deleteUserDetail = asyncHandler(async (req , res) => {
     res.status(200).json({message : `delete user detail for ${req.params.id}`})
-}
+})
 
-const getUserdetailById = (req , res) => {
+const getUserdetailById = asyncHandler(async (req , res) => {
     res.status(200).json({message : `get user detail for ${req.params.id}`})
-}
+})
 export {getUserdetail , postUserDetail ,updateUserDetail , deleteUserDetail, getUserdetailById}
