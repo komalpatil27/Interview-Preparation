@@ -22,12 +22,13 @@
 ### 3.  Temporal dead zone (TDZ) :
 		 The area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
 		 It is a behavior in JavaScript that occurs with the use of let and const variables and their declarations. The Temporal Dead Zone is the period of time during which the variable is unusable because it has been declared but not yet initialized.
-		 ```console.log(x); // ReferenceError: Cannot access 'x' before initialization
+```jsx
+		 console.log(x); // ReferenceError: Cannot access 'x' before initialization
 			let x = 5;
-		 ```
+ ```
 		
 ### 4. Hoisting :
-		 Hositing is a mechanism by which function or variable declartions are moved to the top of their respective scopes before code gets executed. Moved to the top does not mean javascript rearranges the sequence , it means it gives higher precedence to the declarations.
+	 Hositing is a mechanism by which function or variable declartions are moved to the top of their respective scopes before code gets executed. Moved to the top does not mean javascript rearranges the sequence , it means it gives higher precedence to the declarations.
 
 ### 5.  Illegal Shadowing:
 	Shadowing the variables declared with let and var in same scope is illegal. Technically both the variables have same scope so it is not correct as I mentioned that in let declaration shadowing them in same scope is illegal.
@@ -37,14 +38,14 @@
 		Sequence : Immediate scope then global scope.
 	
 ### 7. Mutable/Immutable data types
-		Mutable data types are reference data types. As they can have same reference if we try to modify it.
-		Immutable data types are primitive data types as primitive data type will create new memory allocation every time.
+- Mutable data types are reference data types. As they can have same reference if we try to modify it.
+- Immutable data types are primitive data types as primitive data type will create new memory allocation every time.
 	
 	
 ### 8. Shallow and Deep copy :
 
 	• Shallow Copy
-		A shallowt copies the object and all its properties, but any nested objects or arrays will still reference the same memory location as the original object. It means that if you make changes to the nested object, it will also affect the original object, as well as the copied object.
+		Copies the object and all its properties, but any nested objects or arrays will still reference the same memory location as the original object. It means that if you make changes to the nested object, it will also affect the original object, as well as the copied object.
 		
 			const originalObject = { a: 1, b: { c: 2 } };  
 			const shallowCopy = { ...originalObject };  
@@ -83,6 +84,7 @@
 
 		currying is a technique in JavaScript that allows you to transform functions with multiple arguments into a sequence of functions, each taking one argument at a time. 
 		  /*Function currying*/
+```javascript
 		    function addingValue(firstVal) {
 		        return function (secondVal) {
 		            return firstVal + secondVal        
@@ -91,34 +93,17 @@
 		    let addBytWo = addingValue(2);
 		    let addbyThree = addingValue(3);
 		    console.log(addBytWo(10, 2), addbyThree(12))
+```
 
-
-### 12. HOC :
-
-	Higher-order components or HOC is the advanced method of reusing the component functionality logic. It simply takes the original component and returns the enhanced component.
-	Const App = (props) => {
-	Return (<>{props.name}</>)
-	export default EnhancedComponent(App);
-	
-	const EnhancedComponent = (OriginalComponent) => { 
-	    class NewComponent extends React.Component { 
-	  
-	        // Logic here 
-	  
-	        render() { 
-	            // Pass the callable props to Original component 
-	            return <OriginalComponent name="GeeksforGeeks"  />  
-	        } 
-	    } 
-	    // Returns the new component 
-	    return NewComponent 
-	} 
-	  
-	export default EnhancedComponent;
-
+### 12. JavaScript BOM
+Browser Objects
+1) Window Object
+2) History Object
+3) Navigator Object
+4) Screen Object
 
 ### 13. Higher order functions
-
+```javascript
 		const higherorderFunction = (fnCall , numb) => {
 	        return fnCall(numb)
 	    }
@@ -127,7 +112,7 @@
 	    }
 	    const result = higherorderFunction(addBy2 , 5)
 	    console.log(result)
-
+```
 
 ### 14. Call, apply and bind
 
@@ -247,26 +232,28 @@
  ### 24. Function Basics
 
  - Function statement/Function declaration : Hoisting takes place
-	```function a(){
+	```javascript 
+	function a(){
 		console.log("acheck");
 		a()
-	}```
+	}
+	```
 
 - Function expression : Hoisting does not work
-	```
+	```javascript 
 	const a = function(){
 		console.log("bcheck");
 	}
 	b()
 	```
 - Anonymous function : when functiona used as values (assign it to variable)
-	```
+	```javascript 
 	function(){
 			console.log("bcheck");
 		}
 	```
 - Named function Expression: 
-	```
+	```javascript 
 	const a = function b(){
 		console.log(b); //can access here
 	}

@@ -39,8 +39,8 @@ const ApiConcept = () => {
         }catch(err){
             console.log(err, 'err')
         }
-
     }
+
 
     return <>
     <button onClick = {() => handleApiCall()}></button>

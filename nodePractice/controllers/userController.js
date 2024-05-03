@@ -5,7 +5,7 @@ const getUserdetail = asyncHandler(async (req , res) => {
 })
 
 const postUserDetail = asyncHandler(async (req , res) => {
-    console.log(req.body);
+    console.log(req.body); 
     const {id , email, name} = req.body
     if(!email || !name || !id){
         res.status(400)
