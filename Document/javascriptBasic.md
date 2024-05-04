@@ -5,8 +5,8 @@
 ![Alt text](./images/image.png)
 ![Alt text](./images/image-1.png)
 
-	Execution context and callstack
--   When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
+Execution context and callstack
+-  When the JavaScript engine scans a script file, it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
 
 - During the context runtime, the parser parses the source code and allocates memory for the variables and functions. The source code is generated and gets executed.
 	
@@ -79,6 +79,7 @@
 
 ### 10. Closure
 		Closure in JavaScript is a form of lexical scoping used to preserve variables from the outer scope of a function in the inner scope of a function.
+		A closure is a way for a piece of code to gave access to variables from an outer scope even after the execution of  outer scope is finished.
 		
 ### 11. Currying
 
