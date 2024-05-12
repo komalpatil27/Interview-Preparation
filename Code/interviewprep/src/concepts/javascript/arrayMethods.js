@@ -19,10 +19,13 @@ const ArrayMethods = () => {
     console.log(stringArray.copyWithin(0, 1, 3), 'will replace 0th position element with 1st and so on before 3rd index')
     console.log(stringArray, 'stringArray got modified second time, as it modifies array')
 
+    
     //3.  Array.prototype.entries()
     // The entries() method of Array instances returns a new array iterator object that contains the key/value pairs for each index in the array.
     // Syntax : entries()
     // Return Value : A new iterable iterator object.
+    let res = Array.from(stringArray.entries()).map(([key , value]) => ([key , value]))
+    console.log(res , 'for of')
     for (const element of stringArray.entries()) {
         console.log(element, 'for of will return array of index and element')
     }
@@ -30,11 +33,19 @@ const ArrayMethods = () => {
         console.log(index, element, 'for of will return index and element')
     }
 
+    // The Array.from() static method creates a new, 
+    // shallow-copied Array instance from an iterable or array-like object.
+
     //3.  Array.prototype.every()
     // The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function. 
     // Syntax : every(callbackFn)
     // Return Value : Boolean value.
     console.log(numberArray.every(item => item > 0), 'will return true');
+
+    let resultOfEvery = numberArray.every((item) => {
+        return item > 0 ? true : false
+    })
+    console.log(resultOfEvery , 'resultOfEvery')
 
     //3.  Array.prototype.fill()
     // The fill() method of Array instances changes all elements within a range of indices in an array to a static value. 
@@ -46,9 +57,54 @@ const ArrayMethods = () => {
     //4.  Array.prototype.filter()
     // The filter() method creates a new array filled with elements that pass a test provided by a function.
     // Syntax : array.filter(function(currentValue, index, arr))
-    // Return Value : Modified array.
-    console.log(numberArray.fill(0, 2, 4), 'will return [1, 2, 0, 0, 5, 6]');
-    console.log(numberArray, 'numberArray got modified to [1, 2, 0, 0, 5, 6]');
+    // Return Value : New array whih has truthy value.
+    let filterArray = ['Test 678' , 'Job 865' , 'Search 324']
+    let a = filterArray.filter((item) => {
+        if(item.includes('6')){
+            return false
+        }else return true
+    })
+    console.log(a , 'filterArray')
+
+
+    // Array.prototype.find
+    // returns the first element in the provided array that satisfies the provided testing function.
+    // find(callbackFn)
+    // Return value : new array
+
+    // Find a prime number in the provided array
+    let findArray = [4, 5, 8, 12 , 1128 , 49 , 77]
+    let resultFind = findArray.find((item) => {
+        for (let i = 2; i <= Math.sqrt(item); i++){
+        if(item % i === 0){
+            return false
+        }}
+        return item > 1
+    })
+    console.log(resultFind , ' find')
+
+
+    // ForEach
+    // Find an addition of numbers 
+
+    // Output = [[0, 2] , [7,8]]
+    // create an object of indexes and difference
+    const numberAdd = (array , sum) => {
+      let result = []
+      array.forEach((item , index) => {
+        if(item < sum){
+            let difference = sum - item
+            let secondVal = array.findIndex(item => item === difference)
+            if(secondVal !== -1){
+                result = [...result , [index, secondVal]]
+            }
+        }
+      })
+      return result
+    }
+    
+
+    console.log(numberAdd([6, 2, 3, 1, 0, 1 , 5 , 4 , 6 , 3] , 9) , 'numberadd')
 
     // Array.prototype.slice
     // slice() method is used to create subsets from an array.
@@ -115,9 +171,18 @@ const ArrayMethods = () => {
     let result6 = listOfHeroes.reduce((acc , currval) => {
         return (!acc.find(item => item?.FightSkills === currval?.FightSkills) ? [...acc , currval] : acc)
     }, [])
-
-    
     console.log(result3, result5, result6 , 'Resultsssssss')
+    
+    // Array.prototype.sort
+    // sort method will sort original array, if e don't want to mutate original array then use toSorted()
+    let array = ['Task 18' , 'Task 12' , 'Task 1000' , 'Task 30']
+
+    let resultSort = array.sort((a , b) => {
+        return parseInt(b.split(' ')[1]) - parseInt(a.split(' ')[1])
+    })
+
+    console.log(resultSort , 'sorted results')
+
     
     return (
         <>
