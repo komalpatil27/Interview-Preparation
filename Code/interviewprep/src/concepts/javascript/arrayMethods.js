@@ -79,32 +79,33 @@ const ArrayMethods = () => {
         if(item % i === 0){
             return false
         }}
-        return item > 1
+        return true
     })
     console.log(resultFind , ' find')
 
-
-    // ForEach
     // Find an addition of numbers 
 
-    // Output = [[0, 2] , [7,8]]
-    // create an object of indexes and difference
-    const numberAdd = (array , sum) => {
-      let result = []
-      array.forEach((item , index) => {
-        if(item < sum){
-            let difference = sum - item
-            let secondVal = array.findIndex(item => item === difference)
-            if(secondVal !== -1){
-                result = [...result , [index, secondVal]]
-            }
-        }
-      })
-      return result
-    }
-    
+    const numberAdd = (array, sum) => {
+    let ArrayofSum = {}; // Object to store arrays of indices of elements whose complements are seen so far
+    let SumProvided = [];
 
-    console.log(numberAdd([6, 2, 3, 1, 0, 1 , 5 , 4 , 6 , 3] , 9) , 'numberadd')
+    array.forEach((item, index) => {
+        if(ArrayofSum[item]){
+            ArrayofSum[item].push(index)
+        }else{
+            ArrayofSum[item] =[index]
+        }
+        let diff = sum - item
+        ArrayofSum[diff] && ArrayofSum[diff].forEach(val => {
+            SumProvided.push([val , index])
+        })
+       
+    });
+    console.log(ArrayofSum  , 'chek numberA ')
+    return SumProvided;
+}
+
+    console.log(numberAdd([6, 2, 3, 1, 0,3,3,6, 1 , 5 , 4 , 6 , 3, 9] , 9) , 'numberadd')
 
     // Array.prototype.slice
     // slice() method is used to create subsets from an array.

@@ -8,17 +8,20 @@ import { Provider } from "react-redux";
 import store from "./react-redux/store";
 import ApiConcept from "./javascript/apiConcept";
 import PollyFill from "./javascript/pollyfills";
+import Practice from './javascript/practice'
 function Concepts() {
 
     return (
         <>
-            <ArrayMethods />
+            {/* <ArrayMethods /> */}
             {/* <PromisePractice /> */}
             {/* <JavascriptConcepts /> */}
             {/* <HooksConcept /> */}
             {/* <Provider store={store}><ReduxConcept /></Provider> */}
             {/* <ApiConcept/> */}
             {/* {<PollyFill/>} */}
+            <Practice/>
+            
         </>)
 }
 export default Concepts;

@@ -1,7 +1,9 @@
 // Controller 
 import asyncHandler from 'express-async-handler'
+import User from '../model/userModel'
 const getUserdetail = asyncHandler(async (req , res) => {
-    res.status(200).json({message : 'all users are listed'})
+    const users = User.find()
+    res.status(200).json(users)
 })
 
 const postUserDetail = asyncHandler(async (req , res) => {

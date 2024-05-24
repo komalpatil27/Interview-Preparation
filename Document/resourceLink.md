@@ -10,4 +10,4 @@
 [react](https://github.com/sudheerj/reactjs-interview-questions)
 	
 - HTML -> 
-[html](https://www.javatpoint.com/html-interview-questions)
+[html](https://www.javatpoint.com/html-interview-questions)   

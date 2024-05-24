@@ -1,4 +1,4 @@
-### 1. 1. snapshot and unit Testing
+### 1. snapshot and unit Testing
 ### 2. closure
 ### 3. connect in redux
 ### 4. output based questions on hoisting 
