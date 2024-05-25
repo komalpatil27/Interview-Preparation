@@ -1,19 +1,25 @@
 // Controller 
 import asyncHandler from 'express-async-handler'
-import User from '../model/userModel'
+import User from '../model/userModel.js'
 const getUserdetail = asyncHandler(async (req , res) => {
-    const users = User.find()
+    const users = await User.find()
+    if(users)
     res.status(200).json(users)
 })
 
 const postUserDetail = asyncHandler(async (req , res) => {
     console.log(req.body); 
-    const {id , email, name} = req.body
-    if(!email || !name || !id){
+    const {id , email, name , city} = req.body
+    if(!email || !name || !id || !city){
         res.status(400)
         throw new Error('all fields are mandatory');
     }
-    res.status(200).json({message : 'Create userDetails'})
+    const user = await User.create({
+        id , email, name , city
+    })
+    console.log(user , 'user1')
+    // res.status(200).json({message : 'Create userDetails'})
+    res.status(200).json(user)
 })
 
 const updateUserDetail = asyncHandler(async (req , res) => {

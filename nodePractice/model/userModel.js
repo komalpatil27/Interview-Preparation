@@ -3,18 +3,22 @@ import mongoose from 'mongoose'
 const userSchema =  mongoose.Schema({
     name : {
         type : String,
-        require: [true , "please add contact name"]
+        required: [true , "please add contact name"]
     },
     email : {
         type : String,
-        require: [true , "please add Email"]
+        required: [true , "please add Email"]
     },
     id : {
         type : String,
-        require: [true , "please add  Id"]
+        required: [true , "please add  Id"]
+    },
+    city : {
+        type : String,
+        required: [true , "please add  city"]
     },
 }, {
-    timeStamps : true
+    timestamps : true
 })
 
 export default mongoose.model('User' , userSchema)

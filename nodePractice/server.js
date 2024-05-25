@@ -4,9 +4,9 @@ import errorhandler from './middleware/errorHandler.js';
 import connectDb from './config/dbConnection.js';
 import dotenv from 'dotenv'
 const app = express();
-// dotenv.config();
+dotenv.config();
 const port = process.env.PORT || 5000
-// connectDb()
+connectDb()
 // Without using express router
 /* app.get('/api/userdetails' , (req , res) => {
     // res.send('All users are listed')
