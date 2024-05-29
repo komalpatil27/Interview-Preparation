@@ -23,7 +23,19 @@ const postUserDetail = asyncHandler(async (req , res) => {
 })
 
 const updateUserDetail = asyncHandler(async (req , res) => {
-    res.status(200).json({message : `Update user details for ${req.params.id}`})
+   
+    const users = User.findById(req.params.id)
+    console.log(users , 'userid ------------------------')
+    if(!users){
+        res.status(404);
+        throw new Error('Contact Not Found')
+    }
+    const updatedUserDetail = await User.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new : true}
+    )
+    res.status(200).json(updatedUserDetail)
 })
 
 const deleteUserDetail = asyncHandler(async (req , res) => {
@@ -31,6 +43,12 @@ const deleteUserDetail = asyncHandler(async (req , res) => {
 })
 
 const getUserdetailById = asyncHandler(async (req , res) => {
-    res.status(200).json({message : `get user detail for ${req.params.id}`})
+    const users = User.findById(req.params.id)
+    console.log(users , 'userid ------------------------')
+    if(!users){
+        res.status(404);
+        throw new Error('Contact Not Found')
+    }
+    res.status(200).json(users)
 })
 export {getUserdetail , postUserDetail ,updateUserDetail , deleteUserDetail, getUserdetailById}

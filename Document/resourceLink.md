@@ -11,3 +11,6 @@
 	
 - HTML -> 
 [html](https://www.javatpoint.com/html-interview-questions)   
+
+- Output Questions -> 
+[outputjs](https://github.com/lydiahallie/javascript-questions)
