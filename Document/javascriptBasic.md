@@ -242,7 +242,7 @@ Browser Objects
 
 - Function expression : Hoisting does not work
 	```javascript 
-	const a = function(){
+	const b = function(){
 		console.log("bcheck");
 	}
 	b()

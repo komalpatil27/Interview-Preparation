@@ -145,26 +145,12 @@ margin is the space between the element's border and surrounding elements.
 padding is the space between the content and the element's border.
 
 
-###	12. What is CSS specificity and how does it work?
-CSS specificity is a set of rules that determines which CSS styles get applied to an element when there are conflicting styles targeting the same element. The specificity hierarchy, from highest to lowest, is:
-
-Inline styles
-IDs (#example)
-Classes, pseudo-classes, attribute selectors (.example, :hover, [attr=value])
-Elements, pseudo-elements (div, ::before)
-
-More specific selectors (like IDs) take precedence over less specific selectors (like elements). If two selectors have the same specificity, the last one in the CSS file will be applied.
-What is the box-sizing property, and what are its values?
-The box-sizing property in CSS determines how the total width and height of an element are calculated. It has two main values:
+###	12.The box-sizing property in CSS determines how the total width and height of an element are calculated. It has two main values:
 
 content-box (default): The width and height include only the content area, not the padding, border, or margin.
 border-box: The width and height include the content area, padding, and border, but not the margin.
 
 Using box-sizing: border-box can make it easier to size elements, as the width and height you set will include the padding and border, rather than just the content area.
-What is the difference between display: none and opacity: 0?
-
-display: none completely removes the element from the document flow, as if it doesn't exist. It doesn't take up any space.
-opacity: 0 makes the element invisible but still takes up space in the layout.
 
 
 ###	13. What is the CSS calc() function, and how can it be useful?
