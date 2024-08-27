@@ -9,6 +9,7 @@ import store from "./react-redux/store";
 import ApiConcept from "./javascript/apiConcept";
 import PollyFill from "./javascript/pollyfills";
 import Practice from './javascript/practice'
+import Closure from "./javascript/closure";
 function Concepts() {
 
     return (
@@ -16,12 +17,12 @@ function Concepts() {
             {/* <ArrayMethods /> */}
             {/* <PromisePractice /> */}
             {/* <JavascriptConcepts /> */}
-            <HooksConcept />
+            {/* <HooksConcept /> */}
             {/* <Provider store={store}><ReduxConcept /></Provider> */}
             {/* <ApiConcept/> */}
             {/* {<PollyFill/>} */}
-            <Practice/>
-            
+            {/* <Practice/> */}
+            <Closure/>
         </>)
 }
 export default Concepts;
