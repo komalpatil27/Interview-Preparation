@@ -268,3 +268,13 @@ Browser Objects
 	  -	Passed as arguments to other functions
 	  -	Returned from other functions
 	  -	Stored in data structures like arrays and objects
+
+### 25. Prototype and Prototype chaining
+ - Prototype : Prototype is nothing but an object which consists of built-in properties and methods. Whenever we create object/ function/ methods/ array , these all are attached to some hidden properties, which we call prototype.
+
+'Almost everything in javascript is a object'
+Why is that?
+
+Try accessing an Array.__proto__ : It points to Object prototype , Try Array.__proto__.__proto__ : Refers to null.
+
+ - Prototype Chaining: prototype object has a prototype of its own, and so on until an object is reached with null as its prototype,  this is called prototype chaining
