@@ -278,3 +278,37 @@ Why is that?
 Try accessing an Array.__proto__ : It points to Object prototype , Try Array.__proto__.__proto__ : Refers to null.
 
  - Prototype Chaining: prototype object has a prototype of its own, and so on until an object is reached with null as its prototype,  this is called prototype chaining
+
+
+### Deep Clone
+
+ - JSON.parse(JSON.stringify(val)) : Does not handle functions, undefined, Date, RegExp, Map, Set, Infinity, or circular references.
+ - structuredClone(val) : Handles Date, RegExp, Map, Set, and circular references. Does not handle functions.
+
+
+ ### SOLID Principles
+
+ 1. Single Responsibility Principle (SRP)
+Definition: A class should have only one reason to change, meaning it should have only one responsibility or job.
+
+Explanation: Each class or module should only handle one aspect of the functionality. This makes the class easier to understand and modify because changes to one responsibility do not affect other parts of the system.
+
+2. Open/Closed Principle (OCP)
+Definition: Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+
+Explanation: You should be able to add new functionality to a module or class without changing its existing code. This is typically achieved using abstract classes or interfaces.
+
+3. Liskov Substitution Principle (LSP)
+Definition: Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+
+Explanation: Subclasses should extend the base class without changing its behavior. This means that a subclass should be able to replace its superclass without altering the desirable properties of the program (e.g., correctness, task performed).
+
+4. Interface Segregation Principle (ISP)
+Definition: Clients should not be forced to depend on interfaces they do not use.
+
+Explanation: Create smaller, more specific interfaces rather than a large, general-purpose interface. This prevents clients from being burdened with methods they don’t need.
+
+5. Dependency Inversion Principle (DIP)
+Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
+
+Explanation: High-level components should be designed to depend on abstractions (interfaces) rather than concrete implementations. This promotes flexibility and allows the high-level module to work with any implementation of the abstraction.
