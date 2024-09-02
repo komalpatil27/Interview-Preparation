@@ -25,7 +25,7 @@
 + undefined vs null
 + write an example of useRef()
 + what are event loops
-+ how authentication and suthorization happens
++ how authentication and authorization happens
 + how to store token on server side
 + what are  pure components
 + write example of useMemo()
@@ -67,7 +67,7 @@
 + what are closures? what are its disadvantages?
 + What is lexical scope? 
 + Difference between lexical scopes and other scopes?
-+ Difference between let var and const in terns of hoisting? What is hoisting?
++ Difference between let var and const in terms of hoisting? What is hoisting?
 + what is event loops? how it works?
 + promises vs observable?
 + native function vs arrow function, ‘this’ reference in native and arrow function
