@@ -18,7 +18,7 @@
     - Built-in Methods: Utilize Object.keys(), Object.values(), Object.entries(), Object.assign(), Object.freeze(), and Object.seal().
     - Hash Data Structure: Use objects or Map for key-value pairs.
     - Property Descriptors: Understand and manipulate property descriptors for finer control over object properties.
-    
+
 + Arrays (create, indexes, length, modification, built-in methods: sorting, filtering, search, iterating)
 + Functions (create, invoke)
 + ES2015 Basics (const, let, arrow functions, default parameters, spread operator, destruction, string templates, for..of loop)
@@ -28,7 +28,6 @@
 + Advanced Functions (arguments, 'this' scope, call, apply methods)
 + Functional Patterns (immediate, callback, memoization, chaining, currying, binding)
 + Closures (nested functions, context, inner/outer context)
-+ Object Oriented Programming (constructors, public, private, static members)
 + Prototypal Inheritance (set prototype, temporary constructor patterns, instanceof operator)
 + ES2015 Classes, Inheritance
 + Functional Inheritance, Mix-ins (constructor rent, mix-ins pattern)
