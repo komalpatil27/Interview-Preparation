@@ -57,3 +57,40 @@ console.log(c == d) true
 console.log(a == d) false
 
 ```
+
+
+
+```javascript
+const asyncAdd = (arrayOfPromise) => {
+  let result = 0
+  let count = 0
+  console.log(result , 'result vvvvvvvvvvvvvv')
+  return new Promise((resolve, reject) => {
+      arrayOfPromise.map(promise => {
+          promise.then(val => {
+              result = result + val
+              count = count + 1
+              console.log(val , 'val' , result , count , arrayOfPromise.length)
+              if(arrayOfPromise.length === count){
+                console.log('resolve')
+                  resolve(result)
+              }
+          }).catch(err => {
+               resolve(result)
+          })
+      })
+  })
+}
+
+asyncAdd([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]).then(
+(x) => {
+  console.log(x , 'gggggggggggggg'); // 6
+}
+);
+
+asyncAdd([Promise.resolve(1), Promise.reject(2), Promise.resolve(3)]).then(
+(x) => {
+  console.log(x , 'checking'); // 4
+}
+);
+```
