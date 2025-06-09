@@ -3,6 +3,13 @@
 const PollyFill = () => {
 
     const numbers = [1, 2, 3, 4, 5];
+    Array.prototype.mapPolly = function (callBack) {
+        const MapArray = []
+        for(let i =0; i < this.length; i++){
+            MapArray.push(callBack(this[i], i, this))
+        }
+        return MapArray;
+    }
 
     // pollyFill for map
     Array.prototype.mapPollyFill = function (callbackFn) {

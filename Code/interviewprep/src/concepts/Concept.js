@@ -17,7 +17,7 @@ function Concepts() {
             {/* <ArrayMethods /> */}
             {/* <PromisePractice /> */}
             {/* <JavascriptConcepts /> */}
-            {/* <HooksConcept /> */}
+            <HooksConcept />
             {/* <Provider store={store}><ReduxConcept /></Provider> */}
             {/* <ApiConcept/> */}
             {/* {<PollyFill/>} */}
