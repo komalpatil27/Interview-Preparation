@@ -308,7 +308,7 @@ Definition: Clients should not be forced to depend on interfaces they do not use
 
 Explanation: Create smaller, more specific interfaces rather than a large, general-purpose interface. This prevents clients from being burdened with methods they don’t need.
 
-5. Dependency Inversion Principle (DIP)c
+5. Dependency Inversion Principle (DIP)
 Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
 
 Explanation: High-level components should be designed to depend on abstractions (interfaces) rather than concrete implementations. This promotes flexibility and allows the high-level module to work with any implementation of the abstraction.

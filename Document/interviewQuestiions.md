@@ -133,7 +133,7 @@
 + Javascript object destructuring? How can I extract value in variables from object.
 const person = { name: ‘Ravi’, age: 20}
 How to get values in individual variables using destructuring.?
-+ What is freez()?
++ What is freeze()?
 + Promise in javascript explain in detail.
 + Authentication and authorisation 
 + JWT tokens and OAuth

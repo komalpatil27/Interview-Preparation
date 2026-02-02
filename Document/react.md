@@ -13,7 +13,7 @@ const EmployeeProfile = memo(function EmployeeProfile({ name }) {
     return (
       <>
        <label>
-          Email: <input value={email} onChange={e => setEmail(e.target.value)} />
+          Name: <input value={name} onChange={e => setName(e.target.value)} />
         </label>
         <EmployeeProfile name={name}/>
       </>
@@ -41,7 +41,7 @@ if (someCondition) {
  Example2 :
  import React , {lazy , Suspense} from 'react';
  const Comp = () => {
- cost LazyLoadedComponent = lazy(() => import(./Component))
+ const LazyLoadedComponent = lazy(() => import('./Component'))
  return(
     <>
     <Suspense fallback ={<>'...loading'</>}>
@@ -62,7 +62,7 @@ function BookStore() {
     // 'e' represents synthetic event
     const nativeEvent = e.nativeEvent;
     console.log(nativeEvent);
-    e.stopPropogation();
+    e.stopPropagation();
     e.preventDefault();
   }
   ```

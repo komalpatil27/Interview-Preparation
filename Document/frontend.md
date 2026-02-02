@@ -36,9 +36,9 @@
 
 ## Advanced
 + Strict Mode (activation, limitations)
-+ Regular Expressions Advanced (greedy ans laze search, ranges, grouping)
++ Regular Expressions Advanced (greedy and lazy search, ranges, grouping)
 + JavaScript Errors (try..catch, throw, Error, custom errors)
-+ ES2015 (Promise, Interator, Generator)
++ ES2015 (Promise, Iterator, Generator)
 
 
 ## Client Side JavaScript
@@ -64,5 +64,5 @@
 
 ## Bonus
 + Canvas
-+ HTML5 API (Fullscreen, File, Notifications, GetUserMedia, Speach)
++ HTML5 API (Fullscreen, File, Notifications, GetUserMedia, Speech)
 + Multimedia Elements (video, audio control, media events)
