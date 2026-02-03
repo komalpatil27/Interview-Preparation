@@ -16,7 +16,7 @@ let i = 0
 }
 ```
 
-## QWrite a function called flattenDeep that takes a nested array of arbitrary depth and returns a new flat array with all elements. Your solution should work for any level of nesting. Use a recursive approach and explain how it works.
+## Write a function called flattenDeep that takes a nested array of arbitrary depth and returns a new flat array with all elements. Your solution should work for any level of nesting. Use a recursive approach and explain how it works.
 
 ```javascript 
 // Example usage:

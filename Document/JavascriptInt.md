@@ -130,21 +130,29 @@ console.log(target); // { name: 'John', age: 30 }
 
 ### `Object.freeze()`
 
-Freezes an object, preventing new properties from being added and marking all existing properties as read-only:
+Freezes an object, making it completely immutable. Prevents new properties from being added, existing properties from being removed, and existing properties from being modified:
 ```javascript
-const person = { name: 'John' };
+const person = { name: 'John', age: 30 };
 Object.freeze(person);
-person.age = 30; // No effect
+person.age = 40; // No effect - cannot modify
+person.city = 'NYC'; // No effect - cannot add
+delete person.age; // No effect - cannot delete
+console.log(person); // { name: 'John', age: 30 }
 ```
 
 ### `Object.seal()`
 
-Seals an object, preventing new properties from being added and marking all existing properties as non-configurable:
+Seals an object, preventing new properties from being added and existing properties from being deleted. However, **existing property values can still be modified**:
 ```javascript
-const person = { name: 'John' };
+const person = { name: 'John', age: 30 };
 Object.seal(person);
-person.age = 30; // Property is added but non-configurable
+person.age = 40; // ✓ Works - can modify existing properties
+person.city = 'NYC'; // No effect - cannot add new properties
+delete person.age; // No effect - cannot delete properties
+console.log(person); // { name: 'John', age: 40 }
 ```
+
+**Key Difference:** `Object.seal()` allows modification of existing properties, while `Object.freeze()` does not allow any modifications at all.
 
 ### `Object.preventExtensions()`
 

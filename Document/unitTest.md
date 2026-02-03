@@ -111,5 +111,3 @@ describe("Contact Page Test cases" , () => {
     })
 })
 ```
-
- `Object.seal()` prevents additions, `Object.freeze()` prevents modifications. `Object.seal()` prevents new properties from being added but allows existing properties to be modified.
